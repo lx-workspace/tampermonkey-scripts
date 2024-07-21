@@ -8,7 +8,7 @@
 // @include		*
 // @grant       none
 
-// @version		0.2
+// @version		1.0
 // @updateURL	https://github.com/lx-workspace/tampermonkey-scripts/blob/main/toc.js?raw=
 // ==/UserScript==
 
