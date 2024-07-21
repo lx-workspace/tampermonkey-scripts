@@ -3,12 +3,13 @@
 // @namespace    http://tampermonkey.net/
 // @description  add heading toc to all website
 // @author       liangxoingsl
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=docschina.org
+// @icon         https://github.githubassets.com/favicons/favicon.svg
 // @include		*
 // @grant       none
 
-// @version		0.2
+// @version		0.2.1
 // @updateURL	https://github.com/lx-workspace/tampermonkey-scripts/blob/main/toc.js?raw=
+// @downloadURL	https://github.com/lx-workspace/tampermonkey-scripts/blob/main/toc.js?raw=
 // ==/UserScript==
 
 // https://react.docschina.org/*
@@ -26,12 +27,13 @@
 			el.style.right = '20px'
 			el.style.top = '100px'
 			el.className = 'toc'
-			el.style.background = '#f5f5f5'
+			// el.style.background = '#f5f5f5'
+			el.style.background = 'rgba(245,245,245,0.9)'
 			el.style.borderRadius = '5px'
-			el.style.border = '2px solid black'
+			el.style.border = '1px solid #f6f8fa'
 			el.style.zIndex = '1000'
 			el.style.padding = '8px'
-			el.style.boxShadow = '#f6f6f6'
+			el.style.boxShadow = '-4px -4px 4px #f0f0f0, 4px 4px 4px #f0f0f0'
 			el.style.marginBottom = '20px'
 			el.innerHTML=''
 
@@ -92,7 +94,6 @@
 			// 滚动条
 			ul.style.maxHeight = '550px'
 			ul.style.overflowY = 'auto'
-			// ul.style.transition = 'all 2s'
 			ul.style.transition = 'height 0.5s'
 			let st = true
 			let toggle_body = ()=>{
@@ -154,8 +155,10 @@
 					}
 					scrollBy({top: -60})
 				}
-				li.onmouseover = ()=>li.style.background = '#e0e0e0'
-				li.onmouseout = ()=>li.style.background = '#f5f5f5'
+				// li.onmouseover = ()=>li.style.background = '#e0e0e0'
+				li.onmouseover = ()=>li.style.background = 'rgba(245,245,245,0.9)'
+				// li.onmouseout = ()=>li.style.background = '#f5f5f5'
+				li.onmouseout = ()=>li.style.background = 'rgba(245,245,245,0)'
 				ul.appendChild(li)
 			})
 			el.appendChild(ul)
@@ -165,6 +168,6 @@
 	up()
 	let obs = new MutationObserver(up)
 	obs.observe(document.body, { childList: true, subtree: true, characterData: true })
-	
+
 
 })();
