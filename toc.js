@@ -1,14 +1,13 @@
 // ==UserScript==
 // @name         toc
 // @namespace    http://tampermonkey.net/
-// @version      2024-07-11
 // @description  add heading toc to all website
 // @author       liangxoingsl
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=docschina.org
 // @include		*
 // @grant       none
 
-// @version		1.0
+// @version		0.2
 // @updateURL	https://github.com/lx-workspace/tampermonkey-scripts/blob/main/toc.js?raw=
 // ==/UserScript==
 
