@@ -22,17 +22,14 @@
 			console.log(el.getAttribute('data-path'), location.pathname)
 			el.setAttribute('data-path', location.pathname)
 			el.style.width = '200px'
-// el.style.height = '400px'
 			el.style.position = 'fixed'
 			el.style.right = '20px'
 			el.style.top = '100px'
 			el.className = 'toc'
 			el.style.background = '#f5f5f5'
-			el.style.borderRadius = '2px'
-			el.style.border = '10px'
-			el.style.borderColor = 'black'
+			el.style.borderRadius = '5px'
+			el.style.border = '2px solid black'
 			el.style.zIndex = '1000'
-			el.style.borderRadius = '10px'
 			el.style.padding = '8px'
 			el.style.boxShadow = '#f6f6f6'
 			el.style.marginBottom = '20px'
@@ -168,22 +165,6 @@
 	up()
 	let obs = new MutationObserver(up)
 	obs.observe(document.body, { childList: true, subtree: true, characterData: true })
-
-
-
-
-// let loc = document.location.pathname
-// let go =()=>{
-// 	let now_loc = document.location.pathname
-// 	if (loc !== now_loc){
-// 		loc = now_loc
-//
-// 		let obs = new MutationObserver(up)
-// 		obs.observe(document.body, { childList: true, subtree: true, characterData: true })
-// 	}
-// }
-// clearInterval(go)
-// setInterval(go, 30)
-
+	
 
 })();
